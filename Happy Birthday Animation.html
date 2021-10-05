@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
+</head> 
+<body>
+    <button id='startAnim'>Start Animation</button>
+    <button id='hide_show'>Hide/ Show</button>
+    <button id='fadeIt'>Fade</button>
+    <button id='slideIt'>Slide Up/Down</button>
+    <button id='stopIt'>Stop</button>
+    <p>Happy birthday Sam</p>
+    <script> 
+    	var cnt = 1;
+    	$("#startAnim").click(()=>{
+    		if(cnt==1){
+    			$("p").animate({
+	    			fontSize: "3em",
+				    opacity: '0.7',
+				    height: '+=100px'
+				});
+				cnt+=1; 
+    		}
+    		else{
+    			$("p").animate({
+	    			marginLeft: "+=50px",
+				    opacity: '0.4',
+				    width: '+=100px'
+				});
+				cnt = 1;
+    		}
+    	})
+
+    	$("#hide_show").click(()=>{
+    		$("p").toggle();
+    	})
+
+    	$("#fadeIt").click(()=>{
+    		$("p").fadeTo("slow",0.2);
+    	})
+
+    	$("#slideIt").click(()=>{
+    		$("p").slideToggle();
+    	})
+
+    	$("#stopIt").click(()=>{
+    		$("p").stop();
+    	})
+
+    	$("#stopIt").hover(()=>{
+    		$("p").stop();
+    	})
+    </script>
+</body>
+</html>
