@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'/>
+<style>
+#container{
+    display:flex;
+    align-items:center;
+}
+
+#input{
+    height:25px;
+    margin-left:5px;
+    margin-top:10px;
+}
+</style>
+</head>
+<body>
+<html>
+    <head>
+        <title>Code4</title>
+        <style>
+            h2{
+                display: inline;
+            }
+            .red{
+                color: red;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <label for='name'>
+            <h2>Name :</h2>
+        </label>
+        <input id='name'>
+        <script>
+        	var display = document.querySelector('input');
+            display.addEventListener('mouseover', function(){
+                display.classList.remove('red');
+            })
+            display.addEventListener('mouseout', function(){
+                display.classList.add('red');
+            })
+        </script>
+    </body>
+    
+</html><script>
+var input = document.getElementById("input");
+var value = "";
+input.addEventListener("focusout",()=>{
+    value = input.value;
+    input.value = value.toUpperCase();
+    input.style.color"red";
+});
+input.addEventListener("focusin",()=>{
+    input.value = value;
+    input.style.color = "black";
+});</script>
+</body>
+</html>
