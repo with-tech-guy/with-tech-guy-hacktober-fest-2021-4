@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'/>
+<style>
+
+</style>
+</head>
+<body>
+<!DOCTYPE html>
+    <html>
+
+    <head>
+        <script>
+          function func1()
+          {
+          var aa=document.getElementById("aa").value
+          var i;
+          var a=[];
+          var x="";
+          for(i=0;i<aa;i++)
+                            {
+                            a[i]=prompt("Enter element");
+                            }
+          for(i=0;i<a.length;i++)
+          {
+          var c=0;
+          for(j=0;j<a.length;j++)
+                                  {
+                                  if(a[i]==a[j] && i>j)
+          break;
+          else if(a[i]==a[j])
+          c++;
+                                  }
+          if(c>=1)
+          x=x+a[i]+" has frequency "+c+"<br>";
+          }
+          document.getElementById("h").innerHTML=x;
+          }
+          </script>
+          </head>
+          <body>
+            Enter Number Of Elements to enter in an Array : <input type"number" id="aa">
+            <br>
+              <input type="button" value="Find Frequency" onclick="func1();">
+                <p id="h"></p>
+                </body>
+              </html><script>
+var list = document.getElementById("list");
+function replace(){
+    document.querySelector("li").innerText = "Water";
+}
+
+function append(){
+    elm = document.createElement("LI");
+    text = document.createTextNode("Meat");
+    elm.appendChild(text);
+    list.insertBefore(elm, list.childNodes[0]);
+}
+function insert(){
+    elm = document.createElement("LI");
+    text = document.createTextNode("Lemon Tea");
+    elm.appendChild(text);
+    list.insertBefore(elm, list.childNodes[3]);
+}
+function remove(){
+   list.childNodes[3].innerText==="Lemon Tea" ? list.removeChild(list.childNodes[3]) : null;
+}</script>
+</body>
+</html>
